@@ -1,85 +1,136 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
-</p>
+# Testes Unitários com NestJS
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+Bem-vindo ao repositório **Testes Unitários com NestJS**! Este projeto serve como um exemplo prático de como implementar testes unitários em uma API desenvolvida com NestJS, utilizando o Jest como framework de testes. O objetivo é demonstrar tanto testes de sucesso quanto testes de falha, garantindo a robustez e a confiabilidade da aplicação.
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg" alt="Donate us"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow" alt="Follow us on Twitter"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
 
-## Description
+---
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+## Descrição
 
-## Project setup
+Este projeto exemplifica a implementação de testes unitários em um serviço de gerenciamento de usuários utilizando NestJS e Jest. Os testes incluem cenários de sucesso, verificando o comportamento esperado dos métodos, bem como cenários de falha, garantindo que a aplicação lida adequadamente com erros e exceções.
+
+## Tecnologias Utilizadas
+
+- **Node.js**: Ambiente de execução para JavaScript.
+- **NestJS**: Framework progressivo para construção de aplicações Node.js eficientes e escaláveis.
+- **TypeScript**: Superset de JavaScript que adiciona tipagem estática.
+- **Jest**: Framework de testes em JavaScript.
+- **Git**: Controle de versão.
+
+## Instalação
+
+Siga os passos abaixo para configurar o projeto localmente:
+
+### 1. Pré-requisitos
+
+- **Node.js**: Certifique-se de ter o Node.js instalado. Você pode verificar a instalação executando:
+
+  ```bash
+  node -v
+  ```
+
+  Se não estiver instalado, faça o download em [nodejs.org](https://nodejs.org/).
+
+- **Nest CLI**: Instale o Nest CLI globalmente para facilitar a criação e gerenciamento de projetos NestJS.
+
+  ```bash
+  npm install -g @nestjs/cli
+  ```
+
+  Verifique a instalação:
+
+  ```bash
+  nest --version
+  ```
+
+### 2. Clonando o Repositório
+
+Clone este repositório para sua máquina local:
 
 ```bash
-$ npm install
+git clone https://github.com/seu-usuario/testes-unitarios-nestjs.git
 ```
 
-## Compile and run the project
+### 3. Instalando as Dependências
+
+Navegue até o diretório do projeto e instale as dependências:
 
 ```bash
-# development
-$ npm run start
-
-# watch mode
-$ npm run start:dev
-
-# production mode
-$ npm run start:prod
+cd testes-unitarios-nestjs
+npm install
 ```
 
-## Run tests
+## Executando o Projeto
+
+Para iniciar o servidor de desenvolvimento, execute:
 
 ```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
+npm run start:dev
 ```
 
-## Resources
+O servidor estará rodando em `http://localhost:3000`. Acesse essa URL no seu navegador para verificar se a aplicação está funcionando corretamente.
 
-Check out a few resources that may come in handy when working with NestJS:
+## Rodando os Testes
 
-- Visit the [NestJS Documentation](https://docs.nestjs.com) to learn more about the framework.
-- For questions and support, please visit our [Discord channel](https://discord.gg/G7Qnnhy).
-- To dive deeper and get more hands-on experience, check out our official video [courses](https://courses.nestjs.com/).
-- Visualize your application graph and interact with the NestJS application in real-time using [NestJS Devtools](https://devtools.nestjs.com).
-- Need help with your project (part-time to full-time)? Check out our official [enterprise support](https://enterprise.nestjs.com).
-- To stay in the loop and get updates, follow us on [X](https://x.com/nestframework) and [LinkedIn](https://linkedin.com/company/nestjs).
-- Looking for a job, or have a job to offer? Check out our official [Jobs board](https://jobs.nestjs.com).
+Este projeto inclui testes unitários que cobrem tanto cenários de sucesso quanto de falha. Para executar os testes, execute:
 
-## Support
+```bash
+npm run test
+```
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+### Testes de Sucesso
 
-## Stay in touch
+Os testes de sucesso verificam se os métodos do serviço estão retornando os resultados esperados quando tudo está funcionando corretamente.
 
-- Author - [Kamil Myśliwiec](https://twitter.com/kammysliwiec)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+## Estrutura do Projeto
 
-## License
+A estrutura básica do projeto é a seguinte:
 
-Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
+```
+testes-unitarios-nestjs/
+├── src/
+│   ├── users/
+│   │   ├── user.entity.ts
+│   │   ├── users.repository.ts
+│   │   ├── users.service.ts
+│   │   └── users.service.spec.ts
+│   ├── app.controller.ts
+│   ├── app.controller.spec.ts
+│   ├── app.module.ts
+│   ├── app.service.ts
+│   └── main.ts
+├── test/
+│   ├── app.e2e-spec.ts
+│   └── jest-e2e.json
+├── .eslintrc.js
+├── .gitignore
+├── jest.config.js
+├── nest-cli.json
+├── package.json
+├── README.md
+└── tsconfig.json
+```
+
+
+## Contribuições
+
+Contribuições são bem-vindas! Sinta-se à vontade para abrir **issues** ou enviar **pull requests** para melhorar este projeto.
+
+## Licença
+
+Este projeto está licenciado sob a licença [MIT](LICENSE).
+
+## Contato
+
+Se você tiver dúvidas ou sugestões, sinta-se à vontade para entrar em contato:
+
+- **Nome:** Diogo Felizardo
+- **Email:** developerfelizardo@gmail.com
+- **LinkedIn:** [LinkedIn](https://www.linkedin.com/in/diogofelizardo/)
+- **Instagram:** [Instagram](https://instagram.com/felizardo.dev)
+
+---
+
+**Agradecimentos!**  
+Obrigado por visitar este repositório. Esperamos que este exemplo ajude você a implementar testes unitários eficazes em suas aplicações NestJS. Bons testes!
+```
