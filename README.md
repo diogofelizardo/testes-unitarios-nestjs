@@ -133,4 +133,3 @@ Se você tiver dúvidas ou sugestões, sinta-se à vontade para entrar em contat
 
 **Agradecimentos!**  
 Obrigado por visitar este repositório. Esperamos que este exemplo ajude você a implementar testes unitários eficazes em suas aplicações NestJS. Bons testes!
-```
